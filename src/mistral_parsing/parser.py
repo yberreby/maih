@@ -23,7 +23,7 @@ def analyze_document(file_path):
             "traffic_problem": Traffic problems and its nature,
             "start_date": Start date of the problem,
             "end_date": End date of the problem,
-            "localization": Localization details (streets or relevant locatition), if there are multiple locations, make several elements,
+            "localization": Localization details (streets or relevant location), if there are multiple locations, make several elements,
         },
         ...
     ]
@@ -41,7 +41,7 @@ Document content:
     # Parsing the structured response into a dictionary
     return json.loads(chat_response.choices[0].message.content)["traffic_problems"]
 
-def process_directory(directory_path='../../parsed', result_dir='../../results'):
+def process_directory(directory_path='../../parsed_test', result_dir='../../results'):
     ds = []
     
     for root, dirs, files in os.walk(directory_path):
