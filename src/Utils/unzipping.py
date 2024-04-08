@@ -28,6 +28,4 @@ def unzip_files_in_directory(directory_path):
                 zip_ref.extractall(full_directory_path)
             print(f"Extracted {item} into {full_directory_path}")
 
-# Example usage
-# Replace '/path/to/your/directory' with the actual path to the directory containing your zip files
 unzip_files_in_directory('../../parsed')
