@@ -28,20 +28,3 @@ plt.title("Distribution of file extensions")
 plt.savefig("exts.png")
 plt.figure()
 entries["ext"].value_counts().plot.pie()
-
-# %%
-list(src_pdf_path.glob("*"))[0].name
-
-# %%
-# Print sample files
-
-
-os.path.splitext(list(src_pdf_path.glob("*"))[0])
-
-# %%
-# Analyze the distribution of file extensoions.
-# -> pandas dataframe, KEY = filename; if needed we can use SHA or other hash as well.
-
-
-# %%
-# For now, limit to PDFs only.

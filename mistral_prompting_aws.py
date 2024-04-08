@@ -20,6 +20,7 @@
 # %%
 from src.common import *
 from src.mistral.mistral_demo import extract_semi_structured, extract_structured
+import json
 
 # %%
 aws_txt = pd.read_parquet("results/aws_text.parquet")
@@ -34,5 +35,9 @@ print(input_text)
 # %%time
 ss_txt = extract_semi_structured(input_text)
 print(ss_txt)
+
+# %%
+struct_json = extract_structured(ss_txt)
+print(json.dumps(struct_json, indent=4))
 
 # %%
