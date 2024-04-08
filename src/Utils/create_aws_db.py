@@ -38,7 +38,7 @@ def create_dataframe_from_folders(base_path):
 base_path = '../../parsed'
 df = create_dataframe_from_folders(base_path)
 
-df.to_csv("../../results/aws_text.csv")
+df.to_parquet("../../results/aws_text.parquet")
 
 print(df.head())
 
