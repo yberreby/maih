@@ -39,3 +39,5 @@ print(ss_txt)
 # %%
 struct_json = extract_structured(ss_txt)
 print(json.dumps(struct_json, indent=4))
+
+# %%
