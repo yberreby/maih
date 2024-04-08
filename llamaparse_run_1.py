@@ -100,3 +100,6 @@ df
 df.loc[df["doc"].isna()]
 
 # %%
+results
+
+# %%
