@@ -2,3 +2,10 @@ data
 .venv
 .DS_Store
 llamacloud_api_key
+
+*.pickle
+.ipynb_checkpoints
+*.ipynb
+__pycache__
+
+*.png
