@@ -1,0 +1,15 @@
+@startuml
+!theme plain
+
+participant "Bylaws and PDF\nDocuments" as Docs
+participant "llamaparser" as Parser
+participant "IGN Document\n(Cartographic Info)" as IGN
+database "SQLite Database" as DB
+participant "Dialog API\n(Upload to XML)" as DialogAPI
+
+Docs -> Parser : Parse documents\nfor closure events
+Parser -> IGN : Enrich with\ncartographic information
+IGN -> DB : Store enriched data
+DB -> DialogAPI : Convert & upload\ndata to XML format
+
+@enduml
