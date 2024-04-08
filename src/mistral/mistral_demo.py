@@ -57,7 +57,7 @@ def extract_structured(txt):
                     "properties": {
                         "location": {
                             "type": "array",
-                            "description": "Affected locations, formatted as addresses in such a way that it can be input in a Geolocation API, with specifity without risking incorrectness.",
+                            "description": "Affected locations, formatted as addresses in such a way that it can be input in a Geolocation API, with specifity without risking incorrectness. Typically: number, street name, city, postcode, France.",
                         },
                         "nature": {
                             "type": "string",

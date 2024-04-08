@@ -41,10 +41,12 @@ def extract_text_from_pdf(bucket, document):
             time.sleep(1)
             continue
 
+        l = []
         for item in n_response["Blocks"]:
             if item["BlockType"] == "LINE":
                 found = True
-                return (item["Text"])
+                l.append(item["Text"])
+        return "\n".join(l)
 
 def main():
     filename = "2002-n°65-Interdiction-aux-vehicules-de-plus-de-35-tonnes-avenue-de-Bordeaux.pdf"
